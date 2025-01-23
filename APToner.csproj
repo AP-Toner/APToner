@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\fonts\lato\.DS_Store" />
+    <None Include="wwwroot\fonts\rubik\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
