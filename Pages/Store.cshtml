@@ -1,0 +1,24 @@
+﻿@page
+@model APToner.Pages.StoreModel
+@{
+    ViewData["Title"] = "Store";
+}
+<div class="row">
+    @foreach (var producto in Model.Productos)
+    {
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen de @producto.Nombre">
+                <div class="card-body">
+                    <h5 class="card-title">@producto.Nombre</h5>
+                    <p class="card-text">
+                        Referencia: @producto.Referencia <br>
+                        Precio: @producto.Precio @producto.Moneda <br>
+                        Stock: @producto.Stock
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

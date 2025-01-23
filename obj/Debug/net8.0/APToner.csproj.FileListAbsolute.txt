@@ -28,3 +28,7 @@ C:\Users\User\source\repos\APToner\obj\Debug\net8.0\refint\APToner.dll
 C:\Users\User\source\repos\APToner\obj\Debug\net8.0\APToner.pdb
 C:\Users\User\source\repos\APToner\obj\Debug\net8.0\APToner.genruntimeconfig.cache
 C:\Users\User\source\repos\APToner\obj\Debug\net8.0\ref\APToner.dll
+C:\Users\User\source\repos\APToner\obj\Debug\net8.0\APToner.sourcelink.json
+C:\Users\User\source\repos\APToner\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\source\repos\APToner\obj\Debug\net8.0\APToner.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\APToner\obj\Debug\net8.0\APToner.csproj.Up2Date
