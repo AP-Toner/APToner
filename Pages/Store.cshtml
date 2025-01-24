@@ -6,14 +6,14 @@
 <div class="row">
     @foreach (var producto in Model.Productos)
     {
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen de @producto.Nombre">
+        <div class="col-3">
+            <div class="card productCard">
+                <img src="https://via.placeholder.com/150" class="card-img-top productImage" alt="Imagen de @producto.Nombre">
                 <div class="card-body">
                     <h5 class="card-title">@producto.Nombre</h5>
                     <p class="card-text">
                         Referencia: @producto.Referencia <br>
-                        Precio: @producto.Precio @producto.Moneda <br>
+                        Precio: @producto.Precio.ToString("C") <span style="font-size:0.5rem;">@producto.Moneda</span> <br>
                         Stock: @producto.Stock
                     </p>
                     <a href="#" class="btn btn-primary">Ver detalles</a>

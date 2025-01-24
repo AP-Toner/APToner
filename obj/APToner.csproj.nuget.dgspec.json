@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\APToner\\APToner.csproj": {}
+    "C:\\Users\\User\\Documents\\Development\\APToner\\APToner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\APToner\\APToner.csproj": {
+    "C:\\Users\\User\\Documents\\Development\\APToner\\APToner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\APToner\\APToner.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Development\\APToner\\APToner.csproj",
         "projectName": "APToner",
-        "projectPath": "C:\\Users\\User\\source\\repos\\APToner\\APToner.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Development\\APToner\\APToner.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\APToner\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Development\\APToner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
