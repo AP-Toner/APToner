@@ -10,23 +10,69 @@
     src: url('../fonts/lato/Lato-Regular.ttf') format('truetype');
 }
 
+/* Animaciones */
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLetter {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base */
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -34,6 +80,63 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Manipulación de texto */
+.titulo {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.2;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }
+}
+
+.subtitulo {
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.tag-text, .tag-text-light {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tag-text {
+    color: #012c8b;
+}
+
+.tag-text-light {
+    color: #495e8e;
+}
+
+.white-text {
+    color: white;
+}
+
+/* Overlay de cards */
+.card-overlay {
+    color: white;
+}
+
+    .card-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+/* Sección carrusel */
 .carousel-item {
     position: relative;
 }
@@ -110,54 +213,6 @@ body {
         box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #012c8b;
     }
 
-@keyframes slideInFromTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLetter {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .carousel-item:nth-child(1) .carousel-caption h5,
 .carousel-item:nth-child(1) .carousel-caption .carousel-title,
 .carousel-item:nth-child(1) .carousel-caption .btn-carousel {
@@ -176,6 +231,7 @@ body {
     animation: slideInFromBottom 1.5s ease-out;
 }
 
+/* Sección servicios */
 .servicios .card {
     position: relative;
     overflow: hidden;
@@ -185,21 +241,6 @@ body {
     position: relative;
     z-index: 2;
 }
-
-.card-overlay {
-    color: white;
-}
-
-    .card-overlay::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
 
 .servicios-bg1 {
     background-image: url('../img/slide1-home1.jpg');
@@ -213,41 +254,7 @@ body {
     background-position: center;
 }
 
-.titulo {
-    font-family: 'Rubik', sans-serif;
-    line-height: 1.2;
-    font-size: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .titulo {
-        font-size: 2rem;
-    }
-}
-
-.subtitulo {
-    line-height: 1.2;
-    font-weight: bold;
-    font-size: 1.25rem;
-}
-
-.tag-text, .tag-text-light {
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.tag-text {
-    color: #012c8b;
-}
-
-.tag-text-light {
-    color: #495e8e;
-}
-
-.white-text {
-    color: white;
-}
-
+/* Sección por qué elegirnos */
 .por-que-elegirnos {
     background-color: #0a1f4a;
     color: white;
