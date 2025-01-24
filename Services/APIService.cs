@@ -26,7 +26,6 @@ namespace APToner.Services
                 {
                     var jsonResponse = await response.Content.ReadAsStringAsync();
 
-                    // Deserializa el resultado completo, incluyendo "datos" como T
                     var apiResponse = JsonConvert.DeserializeObject<APIResponse<T>>(jsonResponse);
 
                     return apiResponse;
