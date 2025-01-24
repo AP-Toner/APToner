@@ -1,3 +1,5 @@
+using APToner.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 
 builder.Services.AddMemoryCache();
+
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<APIService>();
 
 var app = builder.Build();
 

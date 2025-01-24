@@ -1,7 +1,9 @@
 ﻿namespace APToner.Models
 {
-    public class APIResponse
+    public class APIResponse<T>
     {
-        public List<Product> datos;
+        public bool Resultado { get; set; }
+        public string Mensaje { get; set; }
+        public T Datos { get; set; }
     }
 }
