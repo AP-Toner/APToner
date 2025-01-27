@@ -12,6 +12,11 @@ builder.Services.AddMemoryCache();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<APIService>();
 
+builder.Services.Configure<IISServerOptions>(options =>
+{
+    options.AutomaticAuthentication = false;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
