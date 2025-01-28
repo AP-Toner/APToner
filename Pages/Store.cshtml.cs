@@ -24,11 +24,16 @@ namespace APToner.Pages
 
         public List<Product> Productos { get; set; } = new List<Product>();
 
-        public async Task OnGetAsync()
+        public int PaginaActual { get; set; } = 1;
+        public int ProductosPorPagina { get; set; } = 21;
+
+        public async Task OnGetAsync(int pagina = 1)
         {
+            PaginaActual = pagina;
+
             if (_cache.TryGetValue("productos", out List<Product> productos))
             {
-                Productos = productos;
+                Productos = productos.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
                 return;
             }
 
@@ -39,7 +44,7 @@ namespace APToner.Pages
                 if (productosObtenidos != null && productosObtenidos.Count > 0)
                 {
                     _cache.Set("productos", productosObtenidos, TimeSpan.FromMinutes(10));
-                    Productos = productosObtenidos;
+                    Productos = productosObtenidos.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
                 }
             }
             catch (Exception ex)

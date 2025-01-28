@@ -5,6 +5,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const spanEl = document.getElementById("clientes");
     const prodTitulo = document.querySelectorAll('.producto-title');
+    const mostrarMasBtn = document.getElementById('mostrar-mas');
+    const listaProductos = document.getElementById('lista-productos');
 
     if (spanEl) {
         const numFinal = parseInt(spanEl.getAttribute('data-to'));
@@ -29,6 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
             //text = text.replace(/\b\w/g, char => char.toUpperCase());
 
             title.textContent = text;
+        });
+    }
+
+    if (mostrarMasBtn && listaProductos) {
+        let paginaActual = 1;
+        const productosPorPagina = 21;
+
+        mostrarMasBtn.addEventListener('click', function () {
+            paginaActual++;
+            fetch(`/Store?page=${paginaActual}`)
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const masProductos = doc.querySelectorAll('#lista-productos .col-12');
+                    masProductos.forEach(producto => listaProductos.appendChild(producto));
+                    if (masProductos.length < productosPorPagina) {
+                        mostrarMasBtn.style.display = 'none';
+                    }
+                })
+                .catch(error => console.error('Error mostrando más productos:', error));
         });
     }
 });
