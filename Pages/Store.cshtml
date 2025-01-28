@@ -1,29 +1,113 @@
 ﻿@page
 @model APToner.Pages.StoreModel
 @{
-    ViewData["Title"] = "Store";
+    ViewData["Title"] = "Tienda";
 }
-<div class="row">
-    @foreach (var producto in Model.Productos)
-    {
-        <div class="col-3">
-            <div class="card productCard">
-                <img src="https:\/\/www.exel.com.mx\/Repositorio\/FTP\/Contenidos\/Imagenes\/Productos\/3M\/3MCACCAC016_zoom.jpg" class="card-img-top productImage" alt="Imagen de @producto.Nombre">
-                <div class="card-body">
-                    <h5 class="card-title">@producto.Nombre</h5>
-                    <p class="card-text">
-                        Referencia: @producto.Referencia <br>
-                        Precio: @producto.Precio.ToString("C") <span style="font-size:0.5rem;">@producto.Moneda</span> <br>
-                        Stock: @producto.Stock
-                    </p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+
+<div class="container">
+    <div class="row">
+        <!-- Filtros -->
+        <div class="col-lg-3 d-none d-lg-block">
+            <h5 class="fw-bold">FILTROS</h5>
+            <div class="accordion" id="filtros">
+                <!-- Marcas -->
+                <div class="card mb-3">
+                    <div class="card-body p-2">
+                        <div class="accordion-item no-borde">
+                            <h5 class="accordion-header" id="headMarcas">
+                                <button class="accordion-button menu-tienda-btn p-2" type="button" data-bs-toggle="collapse" data-bs-target="#marcas" aria-expanded="false" aria-controls="marcas">
+                                    Marcas
+                                </button>
+                            </h5>
+                            <div id="marcas" class="accordion-collapse collapse show" aria-labelledby="headMarcas">
+                                <div class="accordion-body menu-tienda-body p-2">
+                                    @* @foreach (var marca in Model.Marcas) *@
+                                    @* { *@
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="marca.Id" />
+                                        <label class="form-check-label">Nombre</label>
+                                        <span class="badge bg-secondary float-end">Cantidad</span>
+                                    </div>
+                                    @* } *@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Categorías -->
+                <div class="card mb-3">
+                    <div class="card-body p-2">
+                        <div class="accordion-item no-borde">
+                            <h5 class="accordion-header" id="headCategorias">
+                                <button class="accordion-button menu-tienda-btn p-2" type="button" data-bs-toggle="collapse" data-bs-target="#categorias" aria-expanded="false" aria-controls="categorias">
+                                    Categorías
+                                </button>
+                            </h5>
+                            <div id="categorias" class="accordion-collapse collapse show" aria-labelledby="headCategorias">
+                                <div class="accordion-body menu-tienda-body p-2">
+                                    @* @foreach (var categoria in Model.Categorias) *@
+                                    @* { *@
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="categoria.Id" />
+                                        <label class="form-check-label">Nombre</label>
+                                        <span class="badge bg-secondary float-end">Cantidad</span>
+                                    </div>
+                                    @* } *@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SubCategorías -->
+                <div class="card mb-3">
+                    <div class="card-body p-2">
+                        <div class="accordion-item no-borde">
+                            <h5 class="accordion-header" id="headSubCategorias">
+                                <button class="accordion-button menu-tienda-btn p-2" type="button" data-bs-toggle="collapse" data-bs-target="#subcategorias" aria-expanded="false" aria-controls="subcategorias">
+                                    SubCategorías
+                                </button>
+                            </h5>
+                            <div id="subcategorias" class="accordion-collapse collapse show" aria-labelledby="headSubCategorias">
+                                <div class="accordion-body menu-tienda-body p-2">
+                                    @* @foreach (var subcategoria in Model.SubCategorias) *@
+                                    @* { *@
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="subcategoria.Id" />
+                                        <label class="form-check-label">Nombre</label>
+                                        <span class="badge bg-secondary float-end">Cantidad</span>
+                                    </div>
+                                    @* } *@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    }
-</div>
-<style>
-    .productCard {
 
-    }
-</style>
+        <!-- Productos -->
+        <div class="col-md-9">
+            <div class="row d-flex flex-wrap">
+                @foreach (var producto in Model.Productos)
+                {
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex flex-column">
+                        <div class="card d-flex flex-grow-1 flex-column align-items-center justify-content-between">
+                            <img class="card-img-top producto-img" src="https:\/\/www.exel.com.mx\/Repositorio\/FTP\/Contenidos\/Imagenes\/Productos\/3M\/3MCACCAC016_zoom.jpg" class="card-img-top productImage" alt="Imagen de @producto.Nombre">
+                            <div class="card-body d-flex flex-column text-center mt-0">
+                                <h5 class="card-title text-center text-capitalize producto-title mt-auto">@producto.Nombre</h5>
+                                <div class="card-text d-flex flex-grow-1 flex-column justify-content-between">
+                                    <p class="mt-auto subtitulo">@producto.Precio.ToString("C") <span style="font-size:0.5rem;">@producto.Moneda</span></p>
+                                    <p class="row mt-auto">
+                                        <span class="col-6 tag-text text-left">SKU: @producto.Sku</span>
+                                        <span class="col-6 tag-text-grey text-right">📦@producto.Stock</span>
+                                    </p>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary w-100 mt-auto">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
