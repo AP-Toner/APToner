@@ -37,6 +37,7 @@ wwwroot\img\image1-home2.png
 wwwroot\img\lenovo.png
 wwwroot\img\lexmark.jpg
 wwwroot\img\LG.png
+wwwroot\img\no-image.png
 wwwroot\img\samsung.png
 wwwroot\img\seiton-soluciones-en-mps.jpg
 wwwroot\img\slide1-home1.jpg

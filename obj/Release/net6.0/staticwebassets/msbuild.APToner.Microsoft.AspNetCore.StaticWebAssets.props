@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wyo11mdomm</Fingerprint>
-      <Integrity>qL0s4mUIfhk5PJG/E9ReT+tV9aNKGM8wM8QmwCOH8Fc=</Integrity>
+      <Fingerprint>souc1ucz1g</Fingerprint>
+      <Integrity>XH8KIw8h70UszvLATG+mg6dmf2lPghRWoIBlMzYsIKo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -720,6 +720,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\LG.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\no-image.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>APToner</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/APToner</BasePath>
+      <RelativePath>img/no-image.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uw716p50xo</Fingerprint>
+      <Integrity>sge/xQQ0/xD01fK5sMPXiSwG/3IIMCbjNW3XtsOgS0U=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\no-image.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\samsung.png'))">
       <SourceType>Package</SourceType>
       <SourceId>APToner</SourceId>
@@ -840,8 +858,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sobcbqcd0r</Fingerprint>
-      <Integrity>1KbuOKHX2FTpK+L3itoueDQu4GTvo9AnX4bvmznehRg=</Integrity>
+      <Fingerprint>jpcrjrn90a</Fingerprint>
+      <Integrity>F2is9TrKFyYb9ua/fqCAGYsl+nR9lE6K3rHj7eCLp+o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</OriginalItemSpec>

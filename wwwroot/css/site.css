@@ -164,11 +164,11 @@ body {
     }
 
 /* Sección carrusel */
-.carousel-item {
+.carousel-item-idx {
     position: relative;
 }
 
-    .carousel-item::before {
+    .carousel-item-idx::before {
         content: "";
         position: absolute;
         top: 0;
@@ -179,14 +179,14 @@ body {
         z-index: 1;
     }
 
-    .carousel-item img {
+    .carousel-item-idx img {
         height: 500px;
         object-fit: cover;
         position: relative;
         z-index: 0;
     }
 
-.carousel-caption {
+.carousel-caption-idx {
     position: absolute;
     top: 50%;
     left: 10%;
@@ -201,13 +201,13 @@ body {
     text-align: left;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev-idx,
+.carousel-control-next-idx {
     z-index: 3;
     width: 5%;
 }
 
-.carousel-title {
+.carousel-title-idx {
     font-family: 'Rubik', sans-serif;
     font-size: 4rem;
     text-transform: uppercase;
@@ -240,21 +240,21 @@ body {
         box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #012c8b;
     }
 
-.carousel-item:nth-child(1) .carousel-caption h5,
-.carousel-item:nth-child(1) .carousel-caption .carousel-title,
-.carousel-item:nth-child(1) .carousel-caption .btn-carousel {
+.carousel-item-idx:nth-child(1) .carousel-caption-idx h5,
+.carousel-item-idx:nth-child(1) .carousel-caption-idx .carousel-title,
+.carousel-item-idx:nth-child(1) .carousel-caption-idx .btn-carousel {
     animation: slideInFromRight 1.5s ease-out;
 }
 
-.carousel-item:nth-child(2) .carousel-caption h5,
-.carousel-item:nth-child(2) .carousel-caption .carousel-title,
-.carousel-item:nth-child(2) .carousel-caption .carousel-subtitle {
+.carousel-item-idx:nth-child(2) .carousel-caption-idx h5,
+.carousel-item-idx:nth-child(2) .carousel-caption-idx .carousel-title,
+.carousel-item-idx:nth-child(2) .carousel-caption-idx .carousel-subtitle {
     animation: slideInFromTop 1.5s ease-out;
 }
 
-.carousel-item:nth-child(3) .carousel-caption h5,
-.carousel-item:nth-child(3) .carousel-caption .carousel-title,
-.carousel-item:nth-child(3) .carousel-caption .carousel-subtitle {
+.carousel-item-idx:nth-child(3) .carousel-caption-idx h5,
+.carousel-item-idx:nth-child(3) .carousel-caption-idx .carousel-title,
+.carousel-item-idx:nth-child(3) .carousel-caption-idx .carousel-subtitle {
     animation: slideInFromBottom 1.5s ease-out;
 }
 

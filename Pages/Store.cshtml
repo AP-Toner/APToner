@@ -19,15 +19,15 @@
                                     Marcas
                                 </button>
                             </h5>
-                            <div id="marcas" class="accordion-collapse collapse show" aria-labelledby="headMarcas">
+                            <div id="marcas" class="accordion-collapse collapse" aria-labelledby="headMarcas">
                                 <div class="accordion-body menu-tienda-body p-2">
                                     @foreach (var marca in Model.Marcas)
                                     {
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="marca.Id" />
-                                        <label class="form-check-label">@marca.Nombre</label>
-                                        <span class="badge bg-secondary float-end">Cantidad</span>
-                                    </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="marca.Id" />
+                                            <label class="form-check-label">@marca.Nombre</label>
+                                            <span class="badge bg-secondary float-end">Cantidad</span>
+                                        </div>
                                     }
                                 </div>
                             </div>
@@ -45,13 +45,13 @@
                             </h5>
                             <div id="categorias" class="accordion-collapse collapse show" aria-labelledby="headCategorias">
                                 <div class="accordion-body menu-tienda-body p-2">
-                                     @foreach (var categoria in Model.Categorias)
+                                    @foreach (var categoria in Model.Categorias)
                                     { 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="@categoria.Id" />
-                                        <label class="form-check-label">@categoria.Nombre</label>
-                                        <span class="badge bg-secondary float-end">Cantidad</span>
-                                    </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="@categoria.Id" />
+                                            <label class="form-check-label">@categoria.Nombre</label>
+                                            <span class="badge bg-secondary float-end">Cantidad</span>
+                                        </div>
                                     }
                                 </div>
                             </div>
@@ -67,15 +67,15 @@
                                     SubCategorías
                                 </button>
                             </h5>
-                            <div id="subcategorias" class="accordion-collapse collapse show" aria-labelledby="headSubCategorias">
+                            <div id="subcategorias" class="accordion-collapse collapse" aria-labelledby="headSubCategorias">
                                 <div class="accordion-body menu-tienda-body p-2">
                                     @foreach (var subcategoria in Model.Subcategorias)
                                     {
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="subcategoria.Id" />
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="subcategoria.Id" />
                                             <label class="form-check-label">@subcategoria.Nombre</label>
-                                        <span class="badge bg-secondary float-end">Cantidad</span>
-                                    </div>
+                                            <span class="badge bg-secondary float-end">Cantidad</span>
+                                        </div>
                                     }
                                 </div>
                             </div>
@@ -92,18 +92,48 @@
                 {
                     <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex flex-column">
                         <div class="card d-flex flex-grow-1 flex-column align-items-center justify-content-between">
-                            @if (producto.Imagenes.Any())
-                            {
-                                foreach (var imagen in producto.Imagenes)
-                                {
-                                    <img class="card-img-top producto-img" src="@imagen" alt="Imagen de @producto.Nombre">
-                                }
-                            }
-                            else
-                            {
-                                <img class="card-img-top producto-img" src="/images/no-image.png" alt="Imagen no disponible">
-                            }
-
+                            <div id="carousel-@producto.Sku" class="carousel slide p-0" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    @if (producto.Imagenes.Any())
+                                    {
+                                        for (int i = 0; i < producto.Imagenes.Count; i++)
+                                        {
+                                            <button type="button" data-bs-target="#carousel-@producto.Sku" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-current="@(i == 0 ? "true" : "false")" aria-label="Slide @(i + 1)"></button>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <button type="button" data-bs-target="#carousel-@producto.Sku" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    }
+                                </div>
+                                <div class="carousel-inner">
+                                    @if (producto.Imagenes.Any())
+                                    {
+                                        var first = true;
+                                        foreach (var imagen in producto.Imagenes)
+                                        {
+                                            <div class="carousel-item @(first ? "active" : "")">
+                                                <img class="d-block w-100 producto-img" src="@imagen" alt="Imagen de @producto.Nombre" />
+                                            </div>
+                                            first = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100 producto-img" src="/img/no-image.png" alt="Imagen no disponible" />
+                                        </div>
+                                    }
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-@producto.Sku" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-@producto.Sku" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <div class="card-body d-flex flex-column text-center mt-0">
                                 <h5 class="card-title text-center text-capitalize producto-title mt-auto">@producto.Nombre</h5>
                                 <div class="card-text d-flex flex-grow-1 flex-column justify-content-between">
@@ -118,7 +148,6 @@
                         </div>
                     </div>
                 }
-
             </div>
             <button id="mostrar-mas" class="btn btn-primary w-50 mt-4">Ver Más</button>
         </div>

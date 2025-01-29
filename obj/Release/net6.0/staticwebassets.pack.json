@@ -161,6 +161,10 @@
       "PackagePath": "staticwebassets\\img\\lexmark.jpg"
     },
     {
+      "Id": "C:\\Users\\Aptoner\\GitHub\\aptoner\\wwwroot\\img\\no-image.png",
+      "PackagePath": "staticwebassets\\img\\no-image.png"
+    },
+    {
       "Id": "C:\\Users\\Aptoner\\GitHub\\aptoner\\wwwroot\\img\\samsung.png",
       "PackagePath": "staticwebassets\\img\\samsung.png"
     },

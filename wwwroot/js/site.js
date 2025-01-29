@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, duracion);
     }
 
-    if (prodTitulo) {
+    /*if (prodTitulo) {
         prodTitulo.forEach(title => {
             let text = title.textContent.toLowerCase();
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             title.textContent = text;
         });
-    }
+    }*/
 
     if (mostrarMasBtn && listaProductos) {
 
