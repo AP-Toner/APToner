@@ -33,7 +33,6 @@ namespace APToner.Services
                 return new List<Product>();
             }
         }
-
         public async Task<List<Image>> GetAllImagesAsync()
         {
             try
@@ -56,17 +55,28 @@ namespace APToner.Services
                 return new List<Image>();
             }
         }
-        //public async Task<List<Image>> GetProductListImages(List<Product> products)
-        //{
-        //    try
-        //    {
-        //        var response = await _apiService
-        //    }
-        //    catch (Exception)
-        //    {
+        public async Task<List<Category>> GetAllCategoriesAsync()
+        {
+            try
+            {
+                var response = await _apiService.GetAsync<List<Category>>("categorias");
+                Console.WriteLine($"json: {response}");
 
-        //        throw;
-        //    }
-        //}
+                if (response != null && response.Resultado && response.Datos != null)
+                {
+                    return response.Datos;
+                }
+                else
+                {
+                    Console.WriteLine($"Error al obtener los productos: {response?.Mensaje}");
+                    return new List<Category>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Excepción al obtener los productos: {ex.Message}");
+                return new List<Category>();
+            }
+        }
     }
 }

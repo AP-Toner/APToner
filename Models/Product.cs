@@ -1,4 +1,6 @@
-﻿namespace APToner.Models
+﻿using Newtonsoft.Json;
+
+namespace APToner.Models
 {
     public class Product
     {
@@ -33,7 +35,10 @@
 
     public class Category
     {
+        [JsonProperty("id_categoria")]
         public string Id { get; set; }
-        public string Name { get; set; }
+
+        [JsonProperty("nombre_categoria")]
+        public string Nombre { get; set; }
     }
 }

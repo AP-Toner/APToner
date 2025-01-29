@@ -45,14 +45,14 @@
                             </h5>
                             <div id="categorias" class="accordion-collapse collapse show" aria-labelledby="headCategorias">
                                 <div class="accordion-body menu-tienda-body p-2">
-                                    @* @foreach (var categoria in Model.Categorias) *@
-                                    @* { *@
+                                     @foreach (var categoria in Model.Categorias)
+                                    { 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="categoria.Id" />
-                                        <label class="form-check-label">Nombre</label>
+                                        <input class="form-check-input" type="checkbox" value="@categoria.Id" />
+                                        <label class="form-check-label">@categoria.Nombre</label>
                                         <span class="badge bg-secondary float-end">Cantidad</span>
                                     </div>
-                                    @* } *@
+                                    }
                                 </div>
                             </div>
                         </div>

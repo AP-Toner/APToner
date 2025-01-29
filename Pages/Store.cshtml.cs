@@ -24,11 +24,13 @@ namespace APToner.Pages
 
         public List<Product> Productos { get; set; } = new List<Product>();
         public List<Image> Imagenes { get; set; } = new List<Image>();
+        public List<Category> Categorias { get; set; } = new List<Category>();
         public int PaginaActual { get; set; } = 1;
         public int ProductosPorPagina { get; set; } = 21;
 
         public async Task OnGetAsync(int pagina = 1)
         {
+            await obtenerCategorias();
             PaginaActual = pagina;
 
             if (_cache.TryGetValue("productos", out List<Product> productos))
@@ -55,7 +57,6 @@ namespace APToner.Pages
                     AsociarImagenesAProductos(productosAPI, imagenesAPI);
 
                     Productos = productosAPI.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
-
                 }
             }
             catch (Exception ex)
@@ -78,8 +79,25 @@ namespace APToner.Pages
                 }
                 else
                 {
-                    item.Imagenes = new List<string>(); // Si no hay imágenes, lista vacía
+                    item.Imagenes = new List<string>();
                 }
+            }
+        }
+        public async Task obtenerCategorias()
+        {
+            try
+            {
+                var response = await _productService.GetAllCategoriesAsync();
+
+                if (response != null && response.Count > 0)
+                {
+                    _cache.Set("categorias", response, TimeSpan.FromMinutes(10));
+                    Categorias = response;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ocurrió un error al obtener las categorias: {ex.Message}");
             }
         }
     }
