@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aptoner\\GitHub\\aptoner\\APToner.csproj": {}
+    "C:\\Users\\sistemas\\Documents\\Development\\APToner\\APToner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aptoner\\GitHub\\aptoner\\APToner.csproj": {
+    "C:\\Users\\sistemas\\Documents\\Development\\APToner\\APToner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aptoner\\GitHub\\aptoner\\APToner.csproj",
+        "projectUniqueName": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\APToner.csproj",
         "projectName": "APToner",
-        "projectPath": "C:\\Users\\Aptoner\\GitHub\\aptoner\\APToner.csproj",
-        "packagesPath": "C:\\Users\\Aptoner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aptoner\\GitHub\\aptoner\\obj\\",
+        "projectPath": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\APToner.csproj",
+        "packagesPath": "C:\\Users\\sistemas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Aptoner\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,8 +40,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net6.0": {
@@ -67,6 +62,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x86",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -75,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
