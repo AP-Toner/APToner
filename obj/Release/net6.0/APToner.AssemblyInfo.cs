@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APToner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bff46f671f6264334bd05d649c3495d3b0237f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a10e939d9e59af06fcd362d3529de0b5c7b56da")]
 [assembly: System.Reflection.AssemblyProductAttribute("APToner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APToner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

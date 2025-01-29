@@ -49,4 +49,15 @@ namespace APToner.Models
         [JsonProperty("nombre")]
         public string Nombre { get; set; }
     }
+    public class Subcategory
+    {
+        [JsonProperty("id_subcategoria")]
+        public string Id { get; set; }
+        [JsonProperty("nombre_subcategoria")]
+        public string Nombre { get; set; }
+        [JsonProperty("id_categoria")]
+        public string IdCaegoria { get; set; }
+        [JsonProperty("nombre_categoria")]
+        public string NombreCategoria { get; set; }
+    }
 }

@@ -78,6 +78,29 @@ namespace APToner.Services
                 return new List<Category>();
             }
         }
+        public async Task<List<Subcategory>> GetAllSubcategoriesAsync()
+        {
+            try
+            {
+                var response = await _apiService.GetAsync<List<Subcategory>>("subcategorias");
+                Console.WriteLine($"json: {response}");
+
+                if (response != null && response.Resultado && response.Datos != null)
+                {
+                    return response.Datos;
+                }
+                else
+                {
+                    Console.WriteLine($"Error al obtener las categorias: {response?.Mensaje}");
+                    return new List<Subcategory>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Excepción al obtener las categorias: {ex.Message}");
+                return new List<Subcategory>();
+            }
+        }
         public async Task<List<Brand>> GetAllBranchesAsync()
         {
             try

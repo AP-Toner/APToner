@@ -26,6 +26,7 @@ namespace APToner.Pages
         public List<Product> Productos { get; set; } = new List<Product>();
         public List<Image> Imagenes { get; set; } = new List<Image>();
         public List<Category> Categorias { get; set; } = new List<Category>();
+        public List<Subcategory> Subcategorias { get; set; } = new List<Subcategory>();
         public List<Brand> Marcas { get; set; } = new List<Brand>();
         public int PaginaActual { get; set; } = 1;
         public int ProductosPorPagina { get; set; } = 21;
@@ -40,6 +41,24 @@ namespace APToner.Pages
 
         private async Task obtenerFiltros()
         {
+
+            try
+            {
+                if (!_cache.TryGetValue("marcas", out List<Brand> marcasAPI))
+                {
+                    marcasAPI = await _productService.GetAllBranchesAsync();
+
+                    if (marcasAPI != null && marcasAPI.Count > 0)
+                    {
+                        _cache.Set("marcas", marcasAPI, TimeSpan.FromMinutes(10));
+                    }
+                }
+                Marcas = marcasAPI ?? new List<Brand>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ocurrió un error al obtener las marcas: {ex.Message}");
+            }
             try
             {
                 if (!_cache.TryGetValue("categorias", out List<Category> categoriasAPI))
@@ -60,16 +79,16 @@ namespace APToner.Pages
 
             try
             {
-                if (!_cache.TryGetValue("marcas", out List<Brand> marcasAPI))
+                if (!_cache.TryGetValue("subcategorias", out List<Subcategory> subcategoriasAPI))
                 {
-                    marcasAPI = await _productService.GetAllBranchesAsync();
+                    subcategoriasAPI = await _productService.GetAllSubcategoriesAsync();
 
-                    if (marcasAPI != null && marcasAPI.Count > 0)
+                    if (subcategoriasAPI != null && subcategoriasAPI.Count > 0)
                     {
-                        _cache.Set("marcas", marcasAPI, TimeSpan.FromMinutes(10));
+                        _cache.Set("subcategorias", subcategoriasAPI, TimeSpan.FromMinutes(10));
                     }
                 }
-                Marcas = marcasAPI ?? new List<Brand>();
+                Subcategorias = subcategoriasAPI ?? new List<Subcategory>();
             }
             catch (Exception ex)
             {
