@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0bH0W3mBm2c=",
+  "dgSpecHash": "YevUVCnQhrg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\APToner.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\Development\\APToner\\APToner.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sistemas\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.33\\microsoft.windowsdesktop.app.ref.6.0.33.nupkg.sha512",
-    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.33\\microsoft.netcore.app.ref.6.0.33.nupkg.sha512",
-    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.33\\microsoft.aspnetcore.app.ref.6.0.33.nupkg.sha512",
-    "C:\\Users\\sistemas\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\6.0.33\\microsoft.netcore.app.host.win-x86.6.0.33.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

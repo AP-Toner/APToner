@@ -22,5 +22,18 @@
         public string SubcategoriaNombre { get; set; }
         public string CategoriaId { get; set; }
         public string CategoriaNombre { get; set; }
+        public List<string> Imagenes { get; set; } = new List<string>();
+    }
+    public class Image
+    {
+        public string SKU { get; set; }
+        public string Referencia { get; set; }
+        public string[] imagenes { get; set; }
+    }
+
+    public class Category
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
     }
 }

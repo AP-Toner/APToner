@@ -43,6 +43,34 @@ namespace APToner.Services
             }
         }
 
+        public async Task<APIResponseIMG<T>> GetIMGAsync<T>()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{apiUrl}/imagenes");
+            request.Headers.Add("Authorization", authToken);
 
+            try
+            {
+                var response = await _httpClient.SendAsync(request);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    var apiResponse = JsonConvert.DeserializeObject<APIResponseIMG<T>>(jsonResponse);
+
+                    return apiResponse;
+                }
+                else
+                {
+                    Console.WriteLine($"Error al obtener los datos. Código de estado: {response.StatusCode}");
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Excepción al obtener los datos: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

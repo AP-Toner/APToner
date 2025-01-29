@@ -92,7 +92,18 @@
                 {
                     <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex flex-column">
                         <div class="card d-flex flex-grow-1 flex-column align-items-center justify-content-between">
-                            <img class="card-img-top producto-img" src="https:\/\/www.exel.com.mx\/Repositorio\/FTP\/Contenidos\/Imagenes\/Productos\/3M\/3MCACCAC016_zoom.jpg" class="card-img-top productImage" alt="Imagen de @producto.Nombre">
+                            @if (producto.Imagenes.Any())
+                            {
+                                foreach (var imagen in producto.Imagenes)
+                                {
+                                    <img class="card-img-top producto-img" src="@imagen" alt="Imagen de @producto.Nombre">
+                                }
+                            }
+                            else
+                            {
+                                <img class="card-img-top producto-img" src="/images/no-image.png" alt="Imagen no disponible">
+                            }
+
                             <div class="card-body d-flex flex-column text-center mt-0">
                                 <h5 class="card-title text-center text-capitalize producto-title mt-auto">@producto.Nombre</h5>
                                 <div class="card-text d-flex flex-grow-1 flex-column justify-content-between">
@@ -107,6 +118,7 @@
                         </div>
                     </div>
                 }
+
             </div>
             <button id="mostrar-mas" class="btn btn-primary w-50 mt-4">Ver Más</button>
         </div>

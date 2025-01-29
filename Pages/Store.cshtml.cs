@@ -23,7 +23,7 @@ namespace APToner.Pages
         }
 
         public List<Product> Productos { get; set; } = new List<Product>();
-
+        public List<Image> Imagenes { get; set; } = new List<Image>();
         public int PaginaActual { get; set; } = 1;
         public int ProductosPorPagina { get; set; } = 21;
 
@@ -33,18 +33,29 @@ namespace APToner.Pages
 
             if (_cache.TryGetValue("productos", out List<Product> productos))
             {
+                if (_cache.TryGetValue("imagenes", out List<Image> imagenes))
+                {
+                    AsociarImagenesAProductos(productos, imagenes);
+                }
+
                 Productos = productos.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
                 return;
             }
 
             try
             {
-                var productosObtenidos = await _productService.GetAllProductsAsync();
+                var productosAPI = await _productService.GetAllProductsAsync();
+                var imagenesAPI = await _productService.GetAllImagesAsync();
 
-                if (productosObtenidos != null && productosObtenidos.Count > 0)
+                if (productosAPI != null && productosAPI.Count > 0)
                 {
-                    _cache.Set("productos", productosObtenidos, TimeSpan.FromMinutes(10));
-                    Productos = productosObtenidos.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
+                    _cache.Set("productos", productosAPI, TimeSpan.FromMinutes(10));
+                    _cache.Set("imagenes", imagenesAPI, TimeSpan.FromMinutes(10));
+
+                    AsociarImagenesAProductos(productosAPI, imagenesAPI);
+
+                    Productos = productosAPI.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
+
                 }
             }
             catch (Exception ex)
@@ -52,7 +63,24 @@ namespace APToner.Pages
                 _logger.LogError($"Ocurrió un error al obtener los productos: {ex.Message}");
             }
         }
+        private void AsociarImagenesAProductos(List<Product> productos, List<Image> imagenes)
+        {
+            var imagenesPorSku = imagenes.ToDictionary(
+                img => img.SKU,
+                img => img.imagenes?.ToList() ?? new List<string>()
+            );
 
-
+            foreach (var item in productos)
+            {
+                if (imagenesPorSku.TryGetValue(item.Sku, out var urls))
+                {
+                    item.Imagenes = urls;
+                }
+                else
+                {
+                    item.Imagenes = new List<string>(); // Si no hay imágenes, lista vacía
+                }
+            }
+        }
     }
 }

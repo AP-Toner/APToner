@@ -34,6 +34,39 @@ namespace APToner.Services
             }
         }
 
+        public async Task<List<Image>> GetAllImagesAsync()
+        {
+            try
+            {
+                var response = await _apiService.GetIMGAsync<List<Image>>();
 
+                if (response != null && response.RESULT && response.DATA != null)
+                {
+                    return response.DATA;
+                }
+                else
+                {
+                    Console.WriteLine($"Error al obtener los productos: {response?.MESSAGE}");
+                    return new List<Image>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Excepción al obtener los productos: {ex.Message}");
+                return new List<Image>();
+            }
+        }
+        //public async Task<List<Image>> GetProductListImages(List<Product> products)
+        //{
+        //    try
+        //    {
+        //        var response = await _apiService
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
     }
 }
