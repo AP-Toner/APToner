@@ -21,14 +21,14 @@
                             </h5>
                             <div id="marcas" class="accordion-collapse collapse show" aria-labelledby="headMarcas">
                                 <div class="accordion-body menu-tienda-body p-2">
-                                    @* @foreach (var marca in Model.Marcas) *@
-                                    @* { *@
+                                    @foreach (var marca in Model.Marcas)
+                                    {
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="marca.Id" />
-                                        <label class="form-check-label">Nombre</label>
+                                        <label class="form-check-label">@marca.Nombre</label>
                                         <span class="badge bg-secondary float-end">Cantidad</span>
                                     </div>
-                                    @* } *@
+                                    }
                                 </div>
                             </div>
                         </div>

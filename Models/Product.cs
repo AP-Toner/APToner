@@ -41,4 +41,12 @@ namespace APToner.Models
         [JsonProperty("nombre_categoria")]
         public string Nombre { get; set; }
     }
+    public class Brand
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("nombre")]
+        public string Nombre { get; set; }
+    }
 }

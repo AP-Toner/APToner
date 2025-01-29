@@ -1,11 +1,12 @@
 using APToner.Models;
 using APToner.Services;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Caching.Memory;
-using Newtonsoft.Json;
-using System.Net.Http.Headers;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace APToner.Pages
 {
@@ -25,45 +26,89 @@ namespace APToner.Pages
         public List<Product> Productos { get; set; } = new List<Product>();
         public List<Image> Imagenes { get; set; } = new List<Image>();
         public List<Category> Categorias { get; set; } = new List<Category>();
+        public List<Brand> Marcas { get; set; } = new List<Brand>();
         public int PaginaActual { get; set; } = 1;
         public int ProductosPorPagina { get; set; } = 21;
 
         public async Task OnGetAsync(int pagina = 1)
         {
-            await obtenerCategorias();
             PaginaActual = pagina;
 
-            if (_cache.TryGetValue("productos", out List<Product> productos))
-            {
-                if (_cache.TryGetValue("imagenes", out List<Image> imagenes))
-                {
-                    AsociarImagenesAProductos(productos, imagenes);
-                }
+            // Ejecutar ambas funciones en paralelo para mejorar el rendimiento
+            await Task.WhenAll(obtenerFiltros(), obtenerProductosConImagenes());
+        }
 
-                Productos = productos.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
-                return;
+        private async Task obtenerFiltros()
+        {
+            try
+            {
+                if (!_cache.TryGetValue("categorias", out List<Category> categoriasAPI))
+                {
+                    categoriasAPI = await _productService.GetAllCategoriesAsync();
+
+                    if (categoriasAPI != null && categoriasAPI.Count > 0)
+                    {
+                        _cache.Set("categorias", categoriasAPI, TimeSpan.FromMinutes(10));
+                    }
+                }
+                Categorias = categoriasAPI ?? new List<Category>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ocurrió un error al obtener las categorías: {ex.Message}");
             }
 
             try
             {
-                var productosAPI = await _productService.GetAllProductsAsync();
-                var imagenesAPI = await _productService.GetAllImagesAsync();
-
-                if (productosAPI != null && productosAPI.Count > 0)
+                if (!_cache.TryGetValue("marcas", out List<Brand> marcasAPI))
                 {
-                    _cache.Set("productos", productosAPI, TimeSpan.FromMinutes(10));
-                    _cache.Set("imagenes", imagenesAPI, TimeSpan.FromMinutes(10));
+                    marcasAPI = await _productService.GetAllBranchesAsync();
 
-                    AsociarImagenesAProductos(productosAPI, imagenesAPI);
-
-                    Productos = productosAPI.Skip((PaginaActual - 1) * ProductosPorPagina).Take(ProductosPorPagina).ToList();
+                    if (marcasAPI != null && marcasAPI.Count > 0)
+                    {
+                        _cache.Set("marcas", marcasAPI, TimeSpan.FromMinutes(10));
+                    }
                 }
+                Marcas = marcasAPI ?? new List<Brand>();
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Ocurrió un error al obtener los productos: {ex.Message}");
+                _logger.LogError($"Ocurrió un error al obtener las marcas: {ex.Message}");
             }
         }
+
+        private async Task obtenerProductosConImagenes()
+        {
+            try
+            {
+                if (!_cache.TryGetValue("productos", out List<Product> productosAPI))
+                {
+                    productosAPI = await _productService.GetAllProductsAsync();
+                    _cache.Set("productos", productosAPI, TimeSpan.FromMinutes(10));
+                }
+
+                if (!_cache.TryGetValue("imagenes", out List<Image> imagenesAPI))
+                {
+                    imagenesAPI = await _productService.GetAllImagesAsync();
+                    _cache.Set("imagenes", imagenesAPI, TimeSpan.FromMinutes(10));
+                }
+
+                // Asociar imágenes a productos si ambos datos están disponibles
+                if (productosAPI != null && imagenesAPI != null)
+                {
+                    AsociarImagenesAProductos(productosAPI, imagenesAPI);
+                }
+
+                Productos = productosAPI?.Skip((PaginaActual - 1) * ProductosPorPagina)
+                                        .Take(ProductosPorPagina)
+                                        .ToList() ?? new List<Product>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ocurrió un error al obtener los productos e imágenes: {ex.Message}");
+            }
+        }
+
         private void AsociarImagenesAProductos(List<Product> productos, List<Image> imagenes)
         {
             var imagenesPorSku = imagenes.ToDictionary(
@@ -81,23 +126,6 @@ namespace APToner.Pages
                 {
                     item.Imagenes = new List<string>();
                 }
-            }
-        }
-        public async Task obtenerCategorias()
-        {
-            try
-            {
-                var response = await _productService.GetAllCategoriesAsync();
-
-                if (response != null && response.Count > 0)
-                {
-                    _cache.Set("categorias", response, TimeSpan.FromMinutes(10));
-                    Categorias = response;
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Ocurrió un error al obtener las categorias: {ex.Message}");
             }
         }
     }

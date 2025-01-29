@@ -68,14 +68,37 @@ namespace APToner.Services
                 }
                 else
                 {
-                    Console.WriteLine($"Error al obtener los productos: {response?.Mensaje}");
+                    Console.WriteLine($"Error al obtener las categorias: {response?.Mensaje}");
                     return new List<Category>();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Excepción al obtener los productos: {ex.Message}");
+                Console.WriteLine($"Excepción al obtener las categorias: {ex.Message}");
                 return new List<Category>();
+            }
+        }
+        public async Task<List<Brand>> GetAllBranchesAsync()
+        {
+            try
+            {
+                var response = await _apiService.GetAsync<List<Brand>>("marcas");
+                Console.WriteLine($"json: {response}");
+
+                if (response != null && response.Resultado && response.Datos != null)
+                {
+                    return response.Datos;
+                }
+                else
+                {
+                    Console.WriteLine($"Error al obtener las marcas: {response?.Mensaje}");
+                    return new List<Brand>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Excepción al obtener las marcas: {ex.Message}");
+                return new List<Brand>();
             }
         }
     }
