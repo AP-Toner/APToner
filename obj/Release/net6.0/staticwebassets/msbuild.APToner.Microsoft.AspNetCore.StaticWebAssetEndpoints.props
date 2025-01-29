@@ -552,17 +552,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vm8z0vjxqg"},{"Name":"integrity","Value":"sha256-iZ3\u002BrZOPzESyVJW0pXD5BmrWxDqqJJyWtlywLvkSakM="},{"Name":"label","Value":"_content/APToner/img/zebra.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9631"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iZ3\u002BrZOPzESyVJW0pXD5BmrWxDqqJJyWtlywLvkSakM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 28 Jan 2025 15:02:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/APToner/js/site.j9tmd3ln2b.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"j9tmd3ln2b"},{"Name":"integrity","Value":"sha256-WZmwK/LRMwGz4LPyDZ7UOxO9SByO34cURIl\u002BE\u002B4OGGI="},{"Name":"label","Value":"_content/APToner/js/site.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2306"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022WZmwK/LRMwGz4LPyDZ7UOxO9SByO34cURIl\u002BE\u002B4OGGI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 28 Jan 2025 21:22:49 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/APToner/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WZmwK/LRMwGz4LPyDZ7UOxO9SByO34cURIl\u002BE\u002B4OGGI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2306"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022WZmwK/LRMwGz4LPyDZ7UOxO9SByO34cURIl\u002BE\u002B4OGGI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 28 Jan 2025 21:22:49 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1KbuOKHX2FTpK\u002BL3itoueDQu4GTvo9AnX4bvmznehRg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2540"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221KbuOKHX2FTpK\u002BL3itoueDQu4GTvo9AnX4bvmznehRg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 29 Jan 2025 20:00:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/APToner/js/site.sobcbqcd0r.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sobcbqcd0r"},{"Name":"integrity","Value":"sha256-1KbuOKHX2FTpK\u002BL3itoueDQu4GTvo9AnX4bvmznehRg="},{"Name":"label","Value":"_content/APToner/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2540"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221KbuOKHX2FTpK\u002BL3itoueDQu4GTvo9AnX4bvmznehRg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 29 Jan 2025 20:00:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/APToner/lib/bootstrap/dist/css/bootstrap-grid.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

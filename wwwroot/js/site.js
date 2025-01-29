@@ -3,6 +3,11 @@
 
 /* "Animación" áumento de números */
 document.addEventListener("DOMContentLoaded", function () {
+    let paginaActual = 1;
+    const productosPorPagina = 21;
+
+    //console.log("Página actual: ", paginaActual);
+
     const spanEl = document.getElementById("clientes");
     const prodTitulo = document.querySelectorAll('.producto-title');
     const mostrarMasBtn = document.getElementById('mostrar-mas');
@@ -35,12 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (mostrarMasBtn && listaProductos) {
-        let paginaActual = 1;
-        const productosPorPagina = 21;
+
+        //console.log("Página actual: ", paginaActual);
 
         mostrarMasBtn.addEventListener('click', function () {
             paginaActual++;
-            fetch(`/Store?page=${paginaActual}`)
+
+            console.log("Página actual: ", paginaActual);
+
+            fetch(`/Store?pagina=${paginaActual}`)
                 .then(response => response.text())
                 .then(html => {
                     const parser = new DOMParser();
@@ -52,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 })
                 .catch(error => console.error('Error mostrando más productos:', error));
+
+            //console.log("Página actual: ", paginaActual);
         });
     }
 });

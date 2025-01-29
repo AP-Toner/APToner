@@ -104,6 +104,8 @@ namespace APToner.Pages
                 {
                     productosAPI = await _productService.GetAllProductsAsync();
                     _cache.Set("productos", productosAPI, TimeSpan.FromMinutes(10));
+                    //_logger.LogInformation("Obtenidos {ProductCount} productos de la API.", productosAPI.Count);
+                    //_logger.LogInformation("Página actual {PaginaActual}.", PaginaActual);
                 }
 
                 if (!_cache.TryGetValue("imagenes", out List<Image> imagenesAPI))
@@ -121,6 +123,7 @@ namespace APToner.Pages
                 Productos = productosAPI?.Skip((PaginaActual - 1) * ProductosPorPagina)
                                         .Take(ProductosPorPagina)
                                         .ToList() ?? new List<Product>();
+                //_logger.LogInformation("Página actual {PaginaActual}.", PaginaActual);
             }
             catch (Exception ex)
             {
