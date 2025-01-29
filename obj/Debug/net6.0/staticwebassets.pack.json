@@ -1,0 +1,437 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\APToner.bundle.scp.css",
+      "PackagePath": "staticwebassets\\APToner.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\Lato-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\lato\\Lato-ThinItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\lato\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\lato\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\README.txt",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\README.txt"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\Rubik-Italic-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\Rubik-Italic-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\Rubik-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\Rubik-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\fonts\\rubik\\static\\Rubik-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\rubik\\static\\Rubik-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\LG.png",
+      "PackagePath": "staticwebassets\\img\\LG.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\comercio-electronico-1024x683-1.jpg",
+      "PackagePath": "staticwebassets\\img\\comercio-electronico-1024x683-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\dell.png",
+      "PackagePath": "staticwebassets\\img\\dell.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\epson.png",
+      "PackagePath": "staticwebassets\\img\\epson.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\hp-1.png",
+      "PackagePath": "staticwebassets\\img\\hp-1.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\image1-home2.png",
+      "PackagePath": "staticwebassets\\img\\image1-home2.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\lenovo.png",
+      "PackagePath": "staticwebassets\\img\\lenovo.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\lexmark.jpg",
+      "PackagePath": "staticwebassets\\img\\lexmark.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\samsung.png",
+      "PackagePath": "staticwebassets\\img\\samsung.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\seiton-soluciones-en-mps.jpg",
+      "PackagePath": "staticwebassets\\img\\seiton-soluciones-en-mps.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\slide1-home1.jpg",
+      "PackagePath": "staticwebassets\\img\\slide1-home1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\slide2-home1.jpg",
+      "PackagePath": "staticwebassets\\img\\slide2-home1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\slide3-home1.jpg",
+      "PackagePath": "staticwebassets\\img\\slide3-home1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\img\\zebra.png",
+      "PackagePath": "staticwebassets\\img\\zebra.png"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\sistemas\\Documents\\Development\\APToner\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.APToner.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.APToner.props",
+      "PackagePath": "build\\APToner.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.APToner.props",
+      "PackagePath": "buildMultiTargeting\\APToner.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.APToner.props",
+      "PackagePath": "buildTransitive\\APToner.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

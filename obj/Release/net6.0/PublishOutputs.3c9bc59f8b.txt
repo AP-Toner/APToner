@@ -1,0 +1,8 @@
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\APToner.exe
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\APToner.dll
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\APToner.deps.json
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\APToner.runtimeconfig.json
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\APToner.pdb
+C:\Users\sistemas\Documents\Development\APToner\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
